@@ -1,19 +1,20 @@
 //
-//  ViewController.swift
+//  location_Page.swift
 //  Amazon
 //
-//  Created by R86 on 13/04/23.
+//  Created by R86 on 18/04/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class location_Page: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    
 
 
 }
-
