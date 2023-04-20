@@ -10,23 +10,48 @@ import UIKit
 class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var lable: UILabel!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var backPackImage: UIImageView!
+    @IBOutlet weak var braslateImage: UIImageView!
+    @IBOutlet weak var gymBageImage: UIImageView!
+    @IBOutlet weak var watchImage: UIImageView!
+    
+    @IBOutlet weak var searchButton: UIButton!
+    
     @IBOutlet weak var collectionView2: UICollectionView!
-    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
     
     var arrForImage1 = [1,2,3,4,5,6,7,8,9,10,11,12,13]
-    var arrForAddImages = [17,18]
+    var arrForAddImages = [18]
     var arrForHeadings = ["Deals","Electronics","Mobiles","Travel","miniTV","Home","Beauties","Furnitures","Pharmacy","Movies","Books,Toys","Appliances","Grocery"]
     var arrFor2ngAdd = ["Amazon Pay","Scan any QR","Pay Bills","Send Money","Keep shopping for",""]
     var arrForImage2ndAdd = [UIImage(named: "21") ,UIImage(systemName: "qrcode"),UIImage(systemName: "newspaper.fill"),UIImage(systemName: "indianrupeesign.square"),UIImage(named: "22"),UIImage(named: "")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        backPackImage.backgroundColor = UIColor.white
+        backPackImage.layer.cornerRadius = 11
+        backPackImage.layer.masksToBounds = true
+        braslateImage.backgroundColor = UIColor.white
+        braslateImage.layer.cornerRadius = 11
+        braslateImage.layer.masksToBounds = true
+        gymBageImage.backgroundColor = UIColor.white
+        gymBageImage.layer.cornerRadius = 11
+        gymBageImage.layer.masksToBounds = true
+        watchImage.layer.cornerRadius = 11
+        watchImage.backgroundColor = UIColor.white
+        watchImage.layer.masksToBounds = true
         lable.layer.cornerRadius = 11
         lable.layer.masksToBounds = true
-        searchTextField.layer.cornerRadius = 11
-        searchTextField.layer.masksToBounds = true
-        
+        searchButton.layer.cornerRadius = 11
+        searchButton.layer.masksToBounds = true
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -60,8 +85,8 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         
         else {
             let cell3 = collectionView3.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! CollectionViewCellFor2ndAdd
-            cell3.backgroundColor = UIColor.white
-            cell3.backgroundColor = UIColor.white
+            cell3.backgroundColor = UIColor.systemGray6
+          
             cell3.layer.cornerRadius = 11
             cell3.lableFor2ndAdd.text = arrFor2ngAdd[indexPath.row]
             cell3.iamgeFor2ndAdd.image = arrForImage2ndAdd[indexPath.row]
@@ -80,7 +105,28 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             return CGSize(width: 425, height: 265)
         }
         else {
-            return CGSize(width: 145, height: 175)
+            return CGSize(width: 130, height: 170)
         }
     }
+    
+    
+    
+    
+    @IBAction func watchImageButtonAction(_ sender: Any) {
+        imageView.image = UIImage(named: "images-11-removebg-preview")
+    }
+    
+    @IBAction func gymBageImageButtonAction(_ sender: Any) {
+        imageView.image = UIImage(named: "images-12-removebg-preview")
+    }
+    
+    @IBAction func braslateImageButtonAction(_ sender: Any) {
+        imageView.image = UIImage(named: "images-13-removebg-preview")
+    }
+    
+    @IBAction func backpackImageButtonAction(_ sender: Any) {
+        imageView.image = UIImage(named: "download-11-removebg-preview-1")
+    }
+    
+    
 }
