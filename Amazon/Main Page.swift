@@ -22,9 +22,12 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
+    @IBOutlet weak var collectionView4: UICollectionView!
     
     var arrForImage1 = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     var arrForAddImages = [18]
+    var arrForOfferImage = [UIImage(named: "199"),UIImage(named: "299"),UIImage(named: "399"),UIImage(named: "499")]
+    var arrForOfferText = ["Top picks under ₹199","Top picks under ₹299","Top picks under ₹399","Top picks under ₹499"]
     var arrForHeadings = ["Deals","Electronics","Mobiles","Travel","miniTV","Home","Beauties","Furnitures","Pharmacy","Movies","Books,Toys","Appliances","Grocery"]
     var arrFor2ngAdd = ["Amazon Pay","Scan any QR","Pay Bills","Send Money","Keep shopping for",""]
     var arrForImage2ndAdd = [UIImage(named: "21") ,UIImage(systemName: "qrcode"),UIImage(systemName: "newspaper.fill"),UIImage(systemName: "indianrupeesign.square"),UIImage(named: "22"),UIImage(named: "")]
@@ -32,20 +35,17 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        backPackImage.backgroundColor = UIColor.white
+        backPackImage.backgroundColor = UIColor.systemGray6
         backPackImage.layer.cornerRadius = 11
         backPackImage.layer.masksToBounds = true
-        braslateImage.backgroundColor = UIColor.white
+        braslateImage.backgroundColor = UIColor.systemGray6
         braslateImage.layer.cornerRadius = 11
         braslateImage.layer.masksToBounds = true
-        gymBageImage.backgroundColor = UIColor.white
+        gymBageImage.backgroundColor = UIColor.systemGray6
         gymBageImage.layer.cornerRadius = 11
         gymBageImage.layer.masksToBounds = true
         watchImage.layer.cornerRadius = 11
-        watchImage.backgroundColor = UIColor.white
+        watchImage.backgroundColor = UIColor.systemGray6
         watchImage.layer.masksToBounds = true
         lable.layer.cornerRadius = 11
         lable.layer.masksToBounds = true
@@ -61,8 +61,11 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         else if collectionView == self.collectionView2 {
             return arrForAddImages.count
         }
-        else {
+        else if collectionView == self.collectionView3{
             return arrFor2ngAdd.count
+        }
+        else {
+            return arrForOfferImage.count
         }
     }
     
@@ -83,7 +86,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             return cell2
         }
         
-        else {
+        else if collectionView == self.collectionView3{
             let cell3 = collectionView3.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! CollectionViewCellFor2ndAdd
             cell3.backgroundColor = UIColor.systemGray6
           
@@ -92,6 +95,13 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             cell3.iamgeFor2ndAdd.image = arrForImage2ndAdd[indexPath.row]
             
             return cell3
+        }
+        else {
+            let cell4 = collectionView4.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! CollectionViewCellForOffer
+         
+            cell4.labelForOffer.text = arrForOfferText[indexPath.row]
+            cell4.imageForOffer.image = arrForOfferImage[indexPath.row]
+            return cell4
         }
         
     }
@@ -104,13 +114,13 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         else if collectionView == self.collectionView2{
             return CGSize(width: 425, height: 265)
         }
-        else {
+        else if collectionView == self.collectionView3{
             return CGSize(width: 130, height: 170)
         }
+        else {
+            return CGSize(width: 200, height: 205)
+        }
     }
-    
-    
-    
     
     @IBAction func watchImageButtonAction(_ sender: Any) {
         imageView.image = UIImage(named: "images-11-removebg-preview")
@@ -128,5 +138,27 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         imageView.image = UIImage(named: "download-11-removebg-preview-1")
     }
     
+    @IBAction func ImageNavigationButtonAction(_ sender: Any) {
+        
+        if imageView.image == UIImage(named: "images-11-removebg-preview") {
+            let navigation = storyboard?.instantiateViewController(withIdentifier: "Watch_Page") as! Watch_Page
+            navigationController?.pushViewController(navigation, animated: true)
+        }
+        else if imageView.image == UIImage(named: "images-12-removebg-preview"){
+            let navigation = storyboard?.instantiateViewController(withIdentifier: "GymBage_Page") as! GymBage_Page
+            navigationController?.pushViewController(navigation, animated: true)
+        }
+        else if imageView.image == UIImage(named: "images-13-removebg-preview") {
+            let navigation = storyboard?.instantiateViewController(withIdentifier: "Braslate_Page") as! Braslate_Page
+            navigationController?.pushViewController(navigation, animated: true)
+        }
+        else if imageView.image == UIImage(named: "download-11-removebg-preview-1"){
+            let navigation = storyboard?.instantiateViewController(withIdentifier: "Bage_Page") as! Bage_Page
+            navigationController?.pushViewController(navigation, animated: true)
+        }
+        else {
+            return
+        }
+    }
     
 }
