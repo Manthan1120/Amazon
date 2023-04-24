@@ -23,6 +23,11 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
     @IBOutlet weak var collectionView4: UICollectionView!
+    @IBOutlet weak var collectionView5: UICollectionView!
+    
+    
+    var arrForSmallAddsText = ["Mobile accessories|Starting ₹99","Beauty & makeup|starting ₹99","Footwear Under ₹499","Kitchen budget bazar|Starting ₹99","Best finds for home|Starting ₹99","Food  & beverages|Starting ₹149","Toys & games|Starting ₹99","See all categories"]
+    var arrForSmallAddsImages = [UIImage(named: "s1"),UIImage(named: "s2"),UIImage(named: "s3"),UIImage(named: "s4"),UIImage(named: "s5"),UIImage(named: "s6"),UIImage(named: "s7"),UIImage(named: "s8")]
     
     var arrForImage1 = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     var arrForAddImages = [18]
@@ -64,8 +69,11 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         else if collectionView == self.collectionView3{
             return arrFor2ngAdd.count
         }
-        else {
+        else if collectionView == self.collectionView4{
             return arrForOfferImage.count
+        }
+        else{
+            return arrForSmallAddsText.count
         }
     }
     
@@ -96,12 +104,20 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             
             return cell3
         }
-        else {
+        else if collectionView == self.collectionView4{
             let cell4 = collectionView4.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! CollectionViewCellForOffer
          
             cell4.labelForOffer.text = arrForOfferText[indexPath.row]
             cell4.imageForOffer.image = arrForOfferImage[indexPath.row]
             return cell4
+        }
+        else {
+            let cell5 = collectionView5.dequeueReusableCell(withReuseIdentifier: "cell5", for: indexPath) as! CollectionViewCellForSmallAdds
+         
+            cell5.imageForSmallAdds.image = arrForSmallAddsImages[indexPath.row]
+            cell5.textForSmallAdds.text = arrForSmallAddsText[indexPath.row]
+           
+            return cell5
         }
         
     }
@@ -117,8 +133,14 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         else if collectionView == self.collectionView3{
             return CGSize(width: 130, height: 170)
         }
+        else if collectionView == self.collectionView4{
+            let cvSize = collectionView4.frame.width
+//            return CGSize(width: cvSize-10.1/2, height: 205)
+            return CGSize(width: (cvSize-10.1)/2, height: 205)
+        }
+        
         else {
-            return CGSize(width: 200, height: 205)
+            return CGSize(width: 200, height: 150)
         }
     }
     
@@ -157,7 +179,8 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             navigationController?.pushViewController(navigation, animated: true)
         }
         else {
-            return
+            let navigation = storyboard?.instantiateViewController(withIdentifier: "Watch_Page") as! Watch_Page
+            navigationController?.pushViewController(navigation, animated: true)
         }
     }
     
