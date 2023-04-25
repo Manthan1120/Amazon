@@ -26,8 +26,8 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var collectionView5: UICollectionView!
     
     
-    var arrForSmallAddsText = ["Mobile accessories|Starting ₹99","Beauty & makeup|starting ₹99","Footwear Under ₹499","Kitchen budget bazar|Starting ₹99","Best finds for home|Starting ₹99","Food  & beverages|Starting ₹149","Toys & games|Starting ₹99","See all categories"]
-    var arrForSmallAddsImages = [UIImage(named: "s1"),UIImage(named: "s2"),UIImage(named: "s3"),UIImage(named: "s4"),UIImage(named: "s5"),UIImage(named: "s6"),UIImage(named: "s7"),UIImage(named: "s8")]
+    var arrForSmallAddsText = ["Mobile accessories|Starting ₹99","Beauty & makeup|starting ₹99","Footwear Under ₹499","Kitchen budget bazar|Starting ₹99","Best finds for home|Starting ₹99","Food  & beverages|Starting ₹149","Toys & games|Starting ₹99","Purfumes|Starting ₹99"]
+    var arrForSmallAddsImages = [UIImage(named: "phone"),UIImage(named: "mackup"),UIImage(named: "foot"),UIImage(named: "home"),UIImage(named: "finds"),UIImage(named: "food"),UIImage(named: "toys"),UIImage(named: "purfume")]
     
     var arrForImage1 = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     var arrForAddImages = [18]
@@ -135,12 +135,11 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         }
         else if collectionView == self.collectionView4{
             let cvSize = collectionView4.frame.width
-//            return CGSize(width: cvSize-10.1/2, height: 205)
             return CGSize(width: (cvSize-10.1)/2, height: 205)
         }
         
         else {
-            return CGSize(width: 200, height: 150)
+            return CGSize(width: 200, height: 162)
         }
     }
     
