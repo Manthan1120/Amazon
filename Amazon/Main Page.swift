@@ -19,6 +19,8 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     
     @IBOutlet weak var searchButton: UIButton!
     
+    @IBOutlet weak var collectionView7: UICollectionView!
+    @IBOutlet weak var collectionView6: UICollectionView!
     @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
@@ -26,9 +28,12 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var collectionView5: UICollectionView!
     
     
+    var arrForLastText = ["Mobiles & Electronics","Amazon Fashion","Home & Kitchen"]
+    var arrForLastImage = ["phones","wears","home&Kitchen"]
+    var arrForKitchenTexts = ["Elecronic Kettles","Cookware","Mixer grinder","Induction cooktop"]
+    var arrForKitchenImahes = [UIImage(named: "ek"),UIImage(named: "cookware"),UIImage(named: "mixer"),UIImage(named: "ic")]
     var arrForSmallAddsText = ["Mobile accessories|Starting ₹99","Beauty & makeup|starting ₹99","Footwear Under ₹499","Kitchen budget bazar|Starting ₹99","Best finds for home|Starting ₹99","Food  & beverages|Starting ₹149","Toys & games|Starting ₹99","Purfumes|Starting ₹99"]
     var arrForSmallAddsImages = [UIImage(named: "phone"),UIImage(named: "mackup"),UIImage(named: "foot"),UIImage(named: "home"),UIImage(named: "finds"),UIImage(named: "food"),UIImage(named: "toys"),UIImage(named: "purfume")]
-    
     var arrForImage1 = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     var arrForAddImages = [18]
     var arrForOfferImage = [UIImage(named: "199"),UIImage(named: "299"),UIImage(named: "399"),UIImage(named: "499")]
@@ -72,8 +77,14 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         else if collectionView == self.collectionView4{
             return arrForOfferImage.count
         }
-        else{
+        else if collectionView == self.collectionView5{
             return arrForSmallAddsText.count
+        }
+        else if collectionView == self.collectionView6{
+            return arrForKitchenTexts.count
+        }
+        else {
+            return arrForLastText.count
         }
     }
     
@@ -104,6 +115,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             
             return cell3
         }
+        
         else if collectionView == self.collectionView4{
             let cell4 = collectionView4.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! CollectionViewCellForOffer
          
@@ -111,13 +123,30 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             cell4.imageForOffer.image = arrForOfferImage[indexPath.row]
             return cell4
         }
-        else {
+        
+        else if collectionView == self.collectionView5{
             let cell5 = collectionView5.dequeueReusableCell(withReuseIdentifier: "cell5", for: indexPath) as! CollectionViewCellForSmallAdds
          
             cell5.imageForSmallAdds.image = arrForSmallAddsImages[indexPath.row]
             cell5.textForSmallAdds.text = arrForSmallAddsText[indexPath.row]
            
             return cell5
+        }
+        
+        else if collectionView == self.collectionView6{
+            let cell6 = collectionView6.dequeueReusableCell(withReuseIdentifier: "cell6", for: indexPath) as! CollectionViewCellForKitchen
+            
+            cell6.imageViewForKitchen.image = arrForKitchenImahes[indexPath.row]
+            cell6.labelForKitchen.text = arrForKitchenTexts[indexPath.row]
+            return cell6
+        }
+        
+        else {
+            let cell7 = collectionView7.dequeueReusableCell(withReuseIdentifier: "cell7", for: indexPath) as! CollectionViewCellForLast
+            
+            cell7.images?.image = UIImage(named: arrForLastImage[indexPath.row])
+            
+            return cell7
         }
         
     }
@@ -137,9 +166,16 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             let cvSize = collectionView4.frame.width
             return CGSize(width: (cvSize-10.1)/2, height: 205)
         }
-        
-        else {
+        else if collectionView == self.collectionView5{
             return CGSize(width: 200, height: 162)
+        }
+        else if collectionView == self.collectionView6{
+            let cvSize = collectionView6.frame.width
+            return CGSize(width: (cvSize-10.1)/2, height: 205)
+        }
+        else {
+            let cvSize = collectionView7.frame.width
+            return CGSize(width: (cvSize-15.1)/2, height: 150)
         }
     }
     
