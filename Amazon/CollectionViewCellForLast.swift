@@ -9,6 +9,7 @@ import UIKit
 
 class CollectionViewCellForLast: UICollectionViewCell {
     
+    @IBOutlet weak var lable: UILabel!
     @IBOutlet weak var images : UIImageView?
     
 }

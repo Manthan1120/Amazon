@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0D83D02A00D0EA0084FB98 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D83CF2A00D0EA0084FB98 /* SearchView.swift */; };
 		DE0E547129E91F5A0061C04E /* User_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E547029E91F5A0061C04E /* User_page.swift */; };
 		DE0E547329E91FB20061C04E /* More_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E547229E91FB20061C04E /* More_page.swift */; };
 		DE0E547529E91FD10061C04E /* Cart_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E547429E91FD10061C04E /* Cart_page.swift */; };
@@ -22,11 +23,12 @@
 		DE2BB56129F2559C00170481 /* Bage_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BB56029F2559C00170481 /* Bage_Page.swift */; };
 		DE2BB56329F2676500170481 /* CollectionViewCellForOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BB56229F2676500170481 /* CollectionViewCellForOffer.swift */; };
 		DE6C173429E95ECB00C2DEBE /* MyCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C173329E95ECB00C2DEBE /* MyCollectionViewCell1.swift */; };
+		DE7A96232A033457000294CA /* TableViewCellForSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A96222A033457000294CA /* TableViewCellForSearch.swift */; };
+		DE7A96262A033B8E000294CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB2690B29E7CDE800BCBC8E /* Main.storyboard */; };
 		DE84A34329F644DE0099BDEA /* CollectionViewCellForSmallAdds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84A34229F644DE0099BDEA /* CollectionViewCellForSmallAdds.swift */; };
 		DEB2690629E7CDE800BCBC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2690529E7CDE800BCBC8E /* AppDelegate.swift */; };
 		DEB2690829E7CDE800BCBC8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2690729E7CDE800BCBC8E /* SceneDelegate.swift */; };
 		DEB2690A29E7CDE800BCBC8E /* User_Account_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2690929E7CDE800BCBC8E /* User_Account_Page.swift */; };
-		DEB2690D29E7CDE800BCBC8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB2690B29E7CDE800BCBC8E /* Main.storyboard */; };
 		DEB2691029E7CDE800BCBC8E /* Amazon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEB2690E29E7CDE800BCBC8E /* Amazon.xcdatamodeld */; };
 		DEB2691229E7CDE900BCBC8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB2691129E7CDE900BCBC8E /* Assets.xcassets */; };
 		DEB2691529E7CDE900BCBC8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB2691329E7CDE900BCBC8E /* LaunchScreen.storyboard */; };
@@ -38,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE0D83CF2A00D0EA0084FB98 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		DE0E547029E91F5A0061C04E /* User_page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_page.swift; sourceTree = "<group>"; };
 		DE0E547229E91FB20061C04E /* More_page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More_page.swift; sourceTree = "<group>"; };
 		DE0E547429E91FD10061C04E /* Cart_page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart_page.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		DE2BB56029F2559C00170481 /* Bage_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bage_Page.swift; sourceTree = "<group>"; };
 		DE2BB56229F2676500170481 /* CollectionViewCellForOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForOffer.swift; sourceTree = "<group>"; };
 		DE6C173329E95ECB00C2DEBE /* MyCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell1.swift; sourceTree = "<group>"; };
+		DE7A96222A033457000294CA /* TableViewCellForSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForSearch.swift; sourceTree = "<group>"; };
 		DE84A34229F644DE0099BDEA /* CollectionViewCellForSmallAdds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForSmallAdds.swift; sourceTree = "<group>"; };
 		DEB2690229E7CDE800BCBC8E /* Amazon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amazon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB2690529E7CDE800BCBC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				DEB2690729E7CDE800BCBC8E /* SceneDelegate.swift */,
 				DEB2690929E7CDE800BCBC8E /* User_Account_Page.swift */,
 				DEB2690B29E7CDE800BCBC8E /* Main.storyboard */,
+				DE7A96222A033457000294CA /* TableViewCellForSearch.swift */,
+				DE0D83CF2A00D0EA0084FB98 /* SearchView.swift */,
 				DE17B05629FB7E77009E6E11 /* CollectionViewCellForLast.swift */,
 				DED8C1C129F8ECE20037E9D1 /* CollectionViewCellForKitchen.swift */,
 				DE2BB56229F2676500170481 /* CollectionViewCellForOffer.swift */,
@@ -191,9 +197,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE7A96262A033B8E000294CA /* Main.storyboard in Resources */,
 				DEB2691529E7CDE900BCBC8E /* LaunchScreen.storyboard in Resources */,
 				DEB2691229E7CDE900BCBC8E /* Assets.xcassets in Resources */,
-				DEB2690D29E7CDE800BCBC8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE142DE629EE8C51004634AD /* CollectionViewCellForMidAdvertise.swift in Sources */,
+				DE7A96232A033457000294CA /* TableViewCellForSearch.swift in Sources */,
 				DEB2692129E7D0AD00BCBC8E /* Singin_Page.swift in Sources */,
 				DEB2690A29E7CDE800BCBC8E /* User_Account_Page.swift in Sources */,
 				DE0E547529E91FD10061C04E /* Cart_page.swift in Sources */,
@@ -212,6 +219,7 @@
 				DED8C1C229F8ECE20037E9D1 /* CollectionViewCellForKitchen.swift in Sources */,
 				DE0E547B29E93FE70061C04E /* TabBar.swift in Sources */,
 				DE84A34329F644DE0099BDEA /* CollectionViewCellForSmallAdds.swift in Sources */,
+				DE0D83D02A00D0EA0084FB98 /* SearchView.swift in Sources */,
 				DEF9FE09408A03FD005686C7 /* CollectionViewCellFor2ndAdd.swift in Sources */,
 				DEB2691029E7CDE800BCBC8E /* Amazon.xcdatamodeld in Sources */,
 				DEB2690629E7CDE800BCBC8E /* AppDelegate.swift in Sources */,

@@ -7,8 +7,10 @@
 
 import UIKit
 
-class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
+,UISearchBarDelegate{
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var lable: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -16,8 +18,6 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var braslateImage: UIImageView!
     @IBOutlet weak var gymBageImage: UIImageView!
     @IBOutlet weak var watchImage: UIImageView!
-    
-    @IBOutlet weak var searchButton: UIButton!
     
     @IBOutlet weak var collectionView7: UICollectionView!
     @IBOutlet weak var collectionView6: UICollectionView!
@@ -27,9 +27,8 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var collectionView4: UICollectionView!
     @IBOutlet weak var collectionView5: UICollectionView!
     
-    
-    var arrForLastText = ["Mobiles & Electronics","Amazon Fashion","Home & Kitchen"]
-    var arrForLastImage = ["phones","wears","home&Kitchen"]
+    var arrForLastText = ["Ear Buts","Electronics accessories","Camera"]
+    var arrForLastImage = ["er","as","cm"]
     var arrForKitchenTexts = ["Elecronic Kettles","Cookware","Mixer grinder","Induction cooktop"]
     var arrForKitchenImahes = [UIImage(named: "ek"),UIImage(named: "cookware"),UIImage(named: "mixer"),UIImage(named: "ic")]
     var arrForSmallAddsText = ["Mobile accessories|Starting ₹99","Beauty & makeup|starting ₹99","Footwear Under ₹499","Kitchen budget bazar|Starting ₹99","Best finds for home|Starting ₹99","Food  & beverages|Starting ₹149","Toys & games|Starting ₹99","Purfumes|Starting ₹99"]
@@ -59,8 +58,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         watchImage.layer.masksToBounds = true
         lable.layer.cornerRadius = 11
         lable.layer.masksToBounds = true
-        searchButton.layer.cornerRadius = 11
-        searchButton.layer.masksToBounds = true
+      
        
     }
     
@@ -143,9 +141,11 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         
         else {
             let cell7 = collectionView7.dequeueReusableCell(withReuseIdentifier: "cell7", for: indexPath) as! CollectionViewCellForLast
-            
+            cell7.backgroundColor = UIColor.systemGray6
+          
+            cell7.layer.cornerRadius = 11
             cell7.images?.image = UIImage(named: arrForLastImage[indexPath.row])
-            
+            cell7.lable?.text = arrForLastText[indexPath.row]
             return cell7
         }
         
@@ -175,7 +175,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         }
         else {
             let cvSize = collectionView7.frame.width
-            return CGSize(width: (cvSize-15.1)/2, height: 150)
+            return CGSize(width: (cvSize-10.1)/3, height: 182)
         }
     }
     
@@ -218,5 +218,12 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             navigationController?.pushViewController(navigation, animated: true)
         }
     }
+
+    @IBAction func logInButtonAction(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "SearchView") as! SearchView
+        navigationController?.pushViewController(navigation, animated: true)
+     
+    }
+   
     
 }
