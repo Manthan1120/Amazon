@@ -10,8 +10,7 @@ import UIKit
 class SearchView: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate {
    
     
-    
- 
+    var arrForSearchHistory : [Any] = []
     @IBOutlet weak var lableForBg: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -20,6 +19,7 @@ class SearchView: UIViewController,UITableViewDelegate,UITableViewDataSource,UIS
         super.viewDidLoad()
         lableForBg.layer.cornerRadius = 11
         lableForBg.layer.masksToBounds = true
+        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -29,25 +29,14 @@ class SearchView: UIViewController,UITableViewDelegate,UITableViewDataSource,UIS
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
-    func store() {
-        
-    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCellForSearch
-
-        tableView.reloadData()
-        cell.lableForSearchHistory.text = searchBar.text
-        print(cell.lableForSearchHistory.text!)
-        
+       
         return cell
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        
-        
-        
+      
     }
 }
