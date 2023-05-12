@@ -31,7 +31,6 @@ class User_Account_Page: UIViewController {
         skipOutlet.layer.cornerRadius = 13
         skipOutlet.layer.masksToBounds = true
         
-        
     }
 
     @IBAction func logInButtonAction(_ sender: Any) {

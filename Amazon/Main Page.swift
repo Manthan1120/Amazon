@@ -225,5 +225,8 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
      
     }
    
-    
+    @IBAction func micButtonAction(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "PopUpForMicButton") as! PopUpForMicButton
+        present(navigation, animated: false)
+    }
 }
