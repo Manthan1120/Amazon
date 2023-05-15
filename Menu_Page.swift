@@ -58,6 +58,13 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         return CGSize(width: 190, height: 190)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
+            navigationController?.pushViewController(navigation, animated: true)
+        }
+    }
+    
     @IBAction func payButtonAction(_ sender: Any) {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "PayPage") as! PayPage
         navigationController?.pushViewController(navigation, animated: true)
