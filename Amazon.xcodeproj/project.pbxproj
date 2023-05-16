@@ -43,6 +43,7 @@
 		DEB2692129E7D0AD00BCBC8E /* Singin_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2692029E7D0AD00BCBC8E /* Singin_Page.swift */; };
 		DED7C5172A08676300D4D190 /* CollectionViewCellForMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7C5162A08676300D4D190 /* CollectionViewCellForMenu.swift */; };
 		DED8C1C229F8ECE20037E9D1 /* CollectionViewCellForKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED8C1C129F8ECE20037E9D1 /* CollectionViewCellForKitchen.swift */; };
+		DEE9322C2A1363B7004D6D0F /* TableViewCell11.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9322B2A1363B7004D6D0F /* TableViewCell11.swift */; };
 		DEF9FE09408A03FD005686C7 /* CollectionViewCellFor2ndAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9FE08408A03FD005686C7 /* CollectionViewCellFor2ndAdd.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		DEB2692029E7D0AD00BCBC8E /* Singin_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singin_Page.swift; sourceTree = "<group>"; };
 		DED7C5162A08676300D4D190 /* CollectionViewCellForMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForMenu.swift; sourceTree = "<group>"; };
 		DED8C1C129F8ECE20037E9D1 /* CollectionViewCellForKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForKitchen.swift; sourceTree = "<group>"; };
+		DEE9322B2A1363B7004D6D0F /* TableViewCell11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell11.swift; sourceTree = "<group>"; };
 		DEF9FE08408A03FD005686C7 /* CollectionViewCellFor2ndAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellFor2ndAdd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 		DEB268F929E7CDE800BCBC8E = {
 			isa = PBXGroup;
 			children = (
+				DEE9322B2A1363B7004D6D0F /* TableViewCell11.swift */,
 				DE1306AD2A11F09900734D23 /* PopForBooks&Educatiion.swift */,
 				DE95B5A62A0DBB0100ED1385 /* SettingPopUp.swift */,
 				DE52C34F2A0C635C00549F13 /* PopUpForMicButton.swift */,
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE9322C2A1363B7004D6D0F /* TableViewCell11.swift in Sources */,
 				DE142DE629EE8C51004634AD /* CollectionViewCellForMidAdvertise.swift in Sources */,
 				DE7A96232A033457000294CA /* TableViewCellForSearch.swift in Sources */,
 				DEB2692129E7D0AD00BCBC8E /* Singin_Page.swift in Sources */,

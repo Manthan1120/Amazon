@@ -10,7 +10,6 @@ import UIKit
 class PopForMenu: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var arr = [""]
-    
     @IBOutlet weak var ViewForPop: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,16 +30,9 @@ class PopForMenu: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = arr[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell11
+        cell.lableForTitle.text = arr[indexPath.row]
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            print("Hello!!")
-        }
-    }
-    
-    
     
 }

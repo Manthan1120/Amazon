@@ -14,6 +14,7 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
     @IBOutlet weak var settingButtton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+
     var arrForMenu = [111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128]
     @IBOutlet weak var pushButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -61,13 +62,13 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         if indexPath.row == 0{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Sell on Amazon"]
+            var arr2 = ["","","","Sell on Amazon","","",""]
             navigation.arr = arr2
         }
         else if indexPath.row == 1 {
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Gift Cards","Gift Finder","Handloom and Handicafts","Small and Medium","Amazon Launchpad"]
+            var arr2 = ["","Gift Cards","Gift Finder","Handloom and Handicafts","Small and Medium","Amazon Launchpad",""]
             navigation.arr = arr2
         }
         else if indexPath.row == 2{
@@ -79,7 +80,7 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         else if indexPath.row == 3{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Car & Motorbike","Insurans"]
+            var arr2 = ["","","Car & Motorbike","Insurans","",""]
             navigation.arr = arr2
         }
         else if indexPath.row == 4{
@@ -91,7 +92,7 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         else if indexPath.row == 5{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Amazon Live","FunZone"]
+            var arr2 = ["","","Amazon Live","FunZone","",""]
             navigation.arr = arr2
         }
         else if indexPath.row == 6{
@@ -151,19 +152,19 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         else if indexPath.row == 15{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Try Prime","Prime Video","Prime Reading","Prime"]
+            var arr2 = ["","Try Prime","Prime Video","Prime Reading","Prime",""]
             navigation.arr = arr2
         }
         else if indexPath.row == 16{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Sports","Garden & Outdoor","Bags, Wallets and Luggage","Travel"]
+            var arr2 = ["","Sports","Garden & Outdoor","Bags, Wallets and Luggage","Travel"]
             navigation.arr = arr2
         }
         else if indexPath.row == 17{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Toys & Game","Baby","Kids'","Baby Wishlist"]
+            var arr2 = ["","Toys & Game","Baby","Kids'","Baby Wishlist",""]
             navigation.arr = arr2
         }
     }
