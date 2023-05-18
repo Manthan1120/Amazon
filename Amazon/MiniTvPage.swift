@@ -9,10 +9,9 @@ import UIKit
 
 class MiniTvPage: UIViewController {
 
-    @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       // webView.loadRequest(URLRequest(url:URL(string: "")!))
+
     }
 
 }

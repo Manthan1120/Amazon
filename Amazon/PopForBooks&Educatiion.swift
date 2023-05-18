@@ -30,8 +30,8 @@ class PopForMenu: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell11
-        cell.lableForTitle.text = arr[indexPath.row]
+        let cell = UITableViewCell()
+        cell.textLabel?.text = arr[indexPath.row]
         return cell
     }
     

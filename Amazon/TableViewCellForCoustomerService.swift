@@ -1,15 +1,17 @@
 //
-//  TableViewCell11.swift
+//  TableViewCellForCoustomerService.swift
 //  Amazon
 //
-//  Created by R86 on 16/05/23.
+//  Created by R86 on 17/05/23.
 //
 
 import UIKit
 
-class TableViewCell11: UITableViewCell {
+class TableViewCellForCoustomerService: UITableViewCell {
 
-    @IBOutlet weak var lableForTitle: UILabel!
+    @IBOutlet weak var imageView1: UIImageView!
+    @IBOutlet weak var lable2: UILabel!
+    @IBOutlet weak var lable1: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

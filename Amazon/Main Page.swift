@@ -30,9 +30,8 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     var arrForLastText = ["Ear Buts","Electronics accessories","Camera"]
     var arrForLastImage = ["er","as","cm"]
     var arrForKitchenTexts = ["Elecronic Kettles","Cookware","Mixer grinder","Induction cooktop"]
-    var arrForKitchenImahes = [UIImage(named: "ek"),UIImage(named: "cookware"),UIImage(named: "mixer"),UIImage(named: "ic")]
-    var arrForSmallAddsText = ["Mobile accessories|Starting ₹99","Beauty & makeup|starting ₹99","Footwear Under ₹499","Kitchen budget bazar|Starting ₹99","Best finds for home|Starting ₹99","Food  & beverages|Starting ₹149","Toys & games|Starting ₹99","Purfumes|Starting ₹99"]
-    var arrForSmallAddsImages = [UIImage(named: "phone"),UIImage(named: "mackup"),UIImage(named: "foot"),UIImage(named: "home"),UIImage(named: "finds"),UIImage(named: "food"),UIImage(named: "toys"),UIImage(named: "purfume")]
+    var arrForKitchenImahes = [UIImage(named: "0341"),UIImage(named: "0342"),UIImage(named: "0343"),UIImage(named: "0344")]
+    var arrForSmallAddsImages = [UIImage(named: "0331-1"),UIImage(named: "0332"),UIImage(named: "0333"),UIImage(named: "0334"),UIImage(named: "0335"),UIImage(named: "0336"),UIImage(named: "0337"),UIImage(named: "0338")]
     var arrForImage1 = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     var arrForAddImages = [18]
     var arrForOfferImage = [UIImage(named: "199"),UIImage(named: "299"),UIImage(named: "399"),UIImage(named: "499")]
@@ -76,7 +75,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             return arrForOfferImage.count
         }
         else if collectionView == self.collectionView5{
-            return arrForSmallAddsText.count
+            return arrForSmallAddsImages.count
         }
         else if collectionView == self.collectionView6{
             return arrForKitchenTexts.count
@@ -126,7 +125,6 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             let cell5 = collectionView5.dequeueReusableCell(withReuseIdentifier: "cell5", for: indexPath) as! CollectionViewCellForSmallAdds
          
             cell5.imageForSmallAdds.image = arrForSmallAddsImages[indexPath.row]
-            cell5.textForSmallAdds.text = arrForSmallAddsText[indexPath.row]
            
             return cell5
         }
@@ -135,7 +133,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             let cell6 = collectionView6.dequeueReusableCell(withReuseIdentifier: "cell6", for: indexPath) as! CollectionViewCellForKitchen
             
             cell6.imageViewForKitchen.image = arrForKitchenImahes[indexPath.row]
-            cell6.labelForKitchen.text = arrForKitchenTexts[indexPath.row]
+            
             return cell6
         }
         
@@ -164,14 +162,15 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         }
         else if collectionView == self.collectionView4{
             let cvSize = collectionView4.frame.width
-            return CGSize(width: (cvSize-10.1)/2, height: 205)
+            return CGSize(width: (cvSize-10.1)/2, height: 212)
         }
         else if collectionView == self.collectionView5{
-            return CGSize(width: 200, height: 162)
+            let cvSize = collectionView5.frame.width
+            return CGSize(width: (cvSize-10.1)/2, height: 125)
         }
         else if collectionView == self.collectionView6{
             let cvSize = collectionView6.frame.width
-            return CGSize(width: (cvSize-10.1)/2, height: 205)
+            return CGSize(width: (cvSize-10.1)/2, height: 212)
         }
         else {
             let cvSize = collectionView7.frame.width
@@ -180,36 +179,36 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     }
     
     @IBAction func watchImageButtonAction(_ sender: Any) {
-        imageView.image = UIImage(named: "images-11-removebg-preview")
+        imageView.image = UIImage(named: "bb4557f6-bbb7-41ac-9913-7a6a8c674e86")
     }
     
     @IBAction func gymBageImageButtonAction(_ sender: Any) {
-        imageView.image = UIImage(named: "images-12-removebg-preview")
+        imageView.image = UIImage(named: "639a815d-11be-4de6-a779-8c9d818fd0d0")
     }
     
-    @IBAction func braslateImageButtonAction(_ sender: Any) {
-        imageView.image = UIImage(named: "images-13-removebg-preview")
+    @IBAction func whiteWatchImageButtonAction(_ sender: Any) {
+        imageView.image = UIImage(named: "9c59ff8e-3328-40d1-be4a-b2f5f5fb695f")
     }
     
-    @IBAction func backpackImageButtonAction(_ sender: Any) {
-        imageView.image = UIImage(named: "download-11-removebg-preview-1")
+    @IBAction func mansWearImageButtonAction(_ sender: Any) {
+        imageView.image = UIImage(named: "eb96404c-de4a-4a11-8c71-564d436984f2")
     }
     
     @IBAction func ImageNavigationButtonAction(_ sender: Any) {
         
-        if imageView.image == UIImage(named: "images-11-removebg-preview") {
+        if imageView.image == UIImage(named: "bb4557f6-bbb7-41ac-9913-7a6a8c674e86") {
             let navigation = storyboard?.instantiateViewController(withIdentifier: "Watch_Page") as! Watch_Page
             navigationController?.pushViewController(navigation, animated: true)
         }
-        else if imageView.image == UIImage(named: "images-12-removebg-preview"){
+        else if imageView.image == UIImage(named: "639a815d-11be-4de6-a779-8c9d818fd0d0"){
             let navigation = storyboard?.instantiateViewController(withIdentifier: "GymBage_Page") as! GymBage_Page
             navigationController?.pushViewController(navigation, animated: true)
         }
-        else if imageView.image == UIImage(named: "images-13-removebg-preview") {
+        else if imageView.image == UIImage(named: "9c59ff8e-3328-40d1-be4a-b2f5f5fb695f") {
             let navigation = storyboard?.instantiateViewController(withIdentifier: "Braslate_Page") as! Braslate_Page
             navigationController?.pushViewController(navigation, animated: true)
         }
-        else if imageView.image == UIImage(named: "download-11-removebg-preview-1"){
+        else if imageView.image == UIImage(named: "eb96404c-de4a-4a11-8c71-564d436984f2"){
             let navigation = storyboard?.instantiateViewController(withIdentifier: "Bage_Page") as! Bage_Page
             navigationController?.pushViewController(navigation, animated: true)
         }
