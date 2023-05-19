@@ -11,6 +11,8 @@ class coustomer_Page: UIViewController,UITableViewDelegate,UITableViewDataSource
   
     
    
+    @IBOutlet weak var chatWuthUsButtonOutlet: UIButton!
+    @IBOutlet weak var talkToUsButtonOutlet: UIButton!
     @IBOutlet weak var bgLable: UILabel!
     @IBOutlet weak var textFiled22: UITextField!
     @IBOutlet weak var view333: UIView!
@@ -22,7 +24,10 @@ class coustomer_Page: UIViewController,UITableViewDelegate,UITableViewDataSource
     var arr2 = ["Track, return or view an order","Return or replace items","View cashback details and other transactions","Edit password, address or payment detailas"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        talkToUsButtonOutlet.layer.cornerRadius = 5
+        talkToUsButtonOutlet.layer.masksToBounds = true
+        chatWuthUsButtonOutlet.layer.cornerRadius = 5
+        chatWuthUsButtonOutlet.layer.masksToBounds = true
         bgLable.layer.borderWidth = 1
         bgLable.layer.borderColor = UIColor.systemGray5.cgColor
         bgLable.layer.cornerRadius = 5
@@ -35,8 +40,8 @@ class coustomer_Page: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
 
     @IBAction func backButtonAction(_ sender: Any) {
-        let navigation = storyboard?.instantiateViewController(withIdentifier: "Menu_Page") as! Menu_Page
-        navigationController?.pushViewController(navigation, animated: true)
+        self.navigationController?.popViewController(animated: true)
+       
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arr.count

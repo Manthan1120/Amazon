@@ -115,8 +115,10 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         
         else if collectionView == self.collectionView4{
             let cell4 = collectionView4.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! CollectionViewCellForOffer
-         
-            cell4.labelForOffer.text = arrForOfferText[indexPath.row]
+            cell4.imageForOffer.layer.cornerRadius = 7
+            
+            cell4.imageForOffer.layer.masksToBounds = true
+            //cell4.labelForOffer.text = arrForOfferText[indexPath.row]
             cell4.imageForOffer.image = arrForOfferImage[indexPath.row]
             return cell4
         }
@@ -162,7 +164,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         }
         else if collectionView == self.collectionView4{
             let cvSize = collectionView4.frame.width
-            return CGSize(width: (cvSize-10.1)/2, height: 212)
+            return CGSize(width: (cvSize-10.1)/2, height: 190)
         }
         else if collectionView == self.collectionView5{
             let cvSize = collectionView5.frame.width
