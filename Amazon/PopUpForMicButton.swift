@@ -10,6 +10,7 @@ import UIKit
 class PopUpForMicButton: UIViewController {
 
     @IBOutlet weak var viewForMic: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewForMic.layer.cornerRadius = 45

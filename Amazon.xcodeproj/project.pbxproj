@@ -33,6 +33,7 @@
 		DE89864F2A14B202007093B4 /* TableViewCellForCoustomerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89864E2A14B202007093B4 /* TableViewCellForCoustomerService.swift */; };
 		DE95B5A52A0DB55A00ED1385 /* coustomer_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95B5A42A0DB55A00ED1385 /* coustomer_Page.swift */; };
 		DE95B5A72A0DBB0100ED1385 /* SettingPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95B5A62A0DBB0100ED1385 /* SettingPopUp.swift */; };
+		DEA20B092A1B5FDD005E7251 /* CollectionViewCell111.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA20B082A1B5FDD005E7251 /* CollectionViewCell111.swift */; };
 		DEB2690629E7CDE800BCBC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2690529E7CDE800BCBC8E /* AppDelegate.swift */; };
 		DEB2690829E7CDE800BCBC8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2690729E7CDE800BCBC8E /* SceneDelegate.swift */; };
 		DEB2690A29E7CDE800BCBC8E /* User_Account_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2690929E7CDE800BCBC8E /* User_Account_Page.swift */; };
@@ -73,6 +74,7 @@
 		DE89864E2A14B202007093B4 /* TableViewCellForCoustomerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForCoustomerService.swift; sourceTree = "<group>"; };
 		DE95B5A42A0DB55A00ED1385 /* coustomer_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coustomer_Page.swift; sourceTree = "<group>"; tabWidth = 4; };
 		DE95B5A62A0DBB0100ED1385 /* SettingPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPopUp.swift; sourceTree = "<group>"; };
+		DEA20B082A1B5FDD005E7251 /* CollectionViewCell111.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell111.swift; sourceTree = "<group>"; };
 		DEB2690229E7CDE800BCBC8E /* Amazon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amazon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB2690529E7CDE800BCBC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB2690729E7CDE800BCBC8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				DEB2691E29E7D07100BCBC8E /* Login_Page.swift */,
 				DE142DE529EE8C51004634AD /* CollectionViewCellForMidAdvertise.swift */,
 				DEB2691C29E7CEA000BCBC8E /* Main Page.swift */,
+				DEA20B082A1B5FDD005E7251 /* CollectionViewCell111.swift */,
 				DE84A34229F644DE0099BDEA /* CollectionViewCellForSmallAdds.swift */,
 				DEB2691129E7CDE900BCBC8E /* Assets.xcassets */,
 				DEB2691329E7CDE900BCBC8E /* LaunchScreen.storyboard */,
@@ -242,6 +245,7 @@
 				DE2BB55B29F2554000170481 /* Watch_Page.swift in Sources */,
 				DED8C1C229F8ECE20037E9D1 /* CollectionViewCellForKitchen.swift in Sources */,
 				DE0E547B29E93FE70061C04E /* TabBar.swift in Sources */,
+				DEA20B092A1B5FDD005E7251 /* CollectionViewCell111.swift in Sources */,
 				DE89864F2A14B202007093B4 /* TableViewCellForCoustomerService.swift in Sources */,
 				DE52C3502A0C635C00549F13 /* PopUpForMicButton.swift in Sources */,
 				DE84A34329F644DE0099BDEA /* CollectionViewCellForSmallAdds.swift in Sources */,

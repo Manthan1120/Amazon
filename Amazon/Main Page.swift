@@ -19,20 +19,21 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var gymBageImage: UIImageView!
     @IBOutlet weak var watchImage: UIImageView!
     
+    @IBOutlet weak var collectionViewForHorizontle: UICollectionView!
     @IBOutlet weak var collectionView7: UICollectionView!
     @IBOutlet weak var collectionView6: UICollectionView!
     @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var collectionView1: UICollectionView!
-    @IBOutlet weak var collectionView3: UICollectionView!
     @IBOutlet weak var collectionView4: UICollectionView!
     @IBOutlet weak var collectionView5: UICollectionView!
     
+    var arrForHorizontle = [0391,0392,0393,0394,0395,0396,0397,0398,0399,03910]
     var arrForLastText = ["Ear Buts","Electronics accessories","Camera"]
     var arrForLastImage = ["er","as","cm"]
     var arrForKitchenTexts = ["Elecronic Kettles","Cookware","Mixer grinder","Induction cooktop"]
     var arrForKitchenImahes = [UIImage(named: "0341"),UIImage(named: "0342"),UIImage(named: "0343"),UIImage(named: "0344")]
     var arrForSmallAddsImages = [UIImage(named: "0331-1"),UIImage(named: "0332"),UIImage(named: "0333"),UIImage(named: "0334"),UIImage(named: "0335"),UIImage(named: "0336"),UIImage(named: "0337"),UIImage(named: "0338")]
-    var arrForImage1 = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+    var arrForImage1 = ["0381","0382","0383","0384","0385","0386","0387","0388","0389","03810","03811","03812","03813","03814","03815","03816"]
     var arrForAddImages = [18]
     var arrForOfferImage = [UIImage(named: "199"),UIImage(named: "299"),UIImage(named: "399"),UIImage(named: "499")]
     var arrForOfferText = ["Top picks under ₹199","Top picks under ₹299","Top picks under ₹399","Top picks under ₹499"]
@@ -68,8 +69,8 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         else if collectionView == self.collectionView2 {
             return arrForAddImages.count
         }
-        else if collectionView == self.collectionView3{
-            return arrFor2ngAdd.count
+        else if collectionView == self.collectionViewForHorizontle{
+            return arrForHorizontle.count
         }
         else if collectionView == self.collectionView4{
             return arrForOfferImage.count
@@ -88,31 +89,22 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionView1 {
             let cell1 = collectionView1.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! CollectionViewCellForTopHeaders
-          
-           
             cell1.image1.image = UIImage(named: "\(arrForImage1[indexPath.row])")
-            cell1.lable1.text = arrForHeadings[indexPath.row]
             return cell1
         }
-        
+        else if collectionView == self.collectionViewForHorizontle {
+            let cell = collectionViewForHorizontle.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell111
+            
+            
+            return cell
+        }
         else if collectionView == self.collectionView2{
             let cell2 = collectionView2.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! CollectionViewCellForMidAdvertise
             cell2.backgroundColor = UIColor.white
             cell2.imageForAdd.image = UIImage(named: "\(arrForAddImages[indexPath.row])")
             return cell2
         }
-        
-        else if collectionView == self.collectionView3{
-            let cell3 = collectionView3.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as! CollectionViewCellFor2ndAdd
-            cell3.backgroundColor = UIColor.systemGray6
-          
-            cell3.layer.cornerRadius = 11
-            cell3.lableFor2ndAdd.text = arrFor2ngAdd[indexPath.row]
-            cell3.iamgeFor2ndAdd.image = arrForImage2ndAdd[indexPath.row]
-            
-            return cell3
-        }
-        
+    
         else if collectionView == self.collectionView4{
             let cell4 = collectionView4.dequeueReusableCell(withReuseIdentifier: "cell4", for: indexPath) as! CollectionViewCellForOffer
             cell4.imageForOffer.layer.cornerRadius = 7
@@ -154,13 +146,13 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == self.collectionView1{
-            return CGSize(width: 90, height: 80)
+            return CGSize(width: 82, height: 85)
         }
         else if collectionView == self.collectionView2{
             return CGSize(width: 425, height: 265)
         }
-        else if collectionView == self.collectionView3{
-            return CGSize(width: 130, height: 170)
+        else if collectionView == self.collectionViewForHorizontle{
+            return CGSize(width: 150, height: 183)
         }
         else if collectionView == self.collectionView4{
             let cvSize = collectionView4.frame.width

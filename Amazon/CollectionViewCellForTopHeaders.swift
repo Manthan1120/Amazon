@@ -9,7 +9,5 @@ import UIKit
 
 class CollectionViewCellForTopHeaders: UICollectionViewCell {
     
-    
-    @IBOutlet weak var lable1: UILabel!
     @IBOutlet weak var image1: UIImageView!
 }
