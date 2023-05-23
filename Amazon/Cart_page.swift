@@ -9,21 +9,23 @@ import UIKit
 
 class Cart_page: UIViewController {
 
+    @IBOutlet weak var shoppingButton: UIButton!
+    @IBOutlet weak var imageForCArt: UIImageView!
+    @IBOutlet weak var navigationButton: UIButton!
+    @IBOutlet weak var micButton: UIButton!
+    @IBOutlet weak var lableForBg: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        imageForCArt.layer.cornerRadius = 52
+        imageForCArt.layer.masksToBounds = true
+        lableForBg.layer.cornerRadius = 11
+        lableForBg.layer.masksToBounds = true
+        shoppingButton.layer.cornerRadius = 7
+        shoppingButton.layer.masksToBounds = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func navigationButton(_ sender: Any) {
+        
     }
-    */
-
+    
 }
