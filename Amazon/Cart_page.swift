@@ -10,22 +10,20 @@ import UIKit
 class Cart_page: UIViewController {
 
     @IBOutlet weak var shoppingButton: UIButton!
-    @IBOutlet weak var imageForCArt: UIImageView!
     @IBOutlet weak var navigationButton: UIButton!
     @IBOutlet weak var micButton: UIButton!
     @IBOutlet weak var lableForBg: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageForCArt.layer.cornerRadius = 52
-        imageForCArt.layer.masksToBounds = true
         lableForBg.layer.cornerRadius = 11
         lableForBg.layer.masksToBounds = true
         shoppingButton.layer.cornerRadius = 7
         shoppingButton.layer.masksToBounds = true
     }
     
-    @IBAction func navigationButton(_ sender: Any) {
-        
+    @IBAction func pickButtonAction(_ sender: Any) {
     }
     
+    @IBAction func payButtonAction(_ sender: Any) {
+    }
 }

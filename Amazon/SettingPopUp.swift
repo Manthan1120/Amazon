@@ -10,7 +10,7 @@ import UIKit
 class SettingPopUp: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     
-    let arr = ["Settings","Country & Language","Notification","Language A/","Alex","Permission","Default Purchase Setting","Legal & About","Switch","Sign Out"]
+    let arr = ["Country & Language","Notification","Language A/","Alex","Permission","Default Purchase Setting","Legal & About","Switch","Sign Out"]
     @IBOutlet weak var ViewForSetting: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
