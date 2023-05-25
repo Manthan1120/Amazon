@@ -61,7 +61,8 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
-            present(navigation, animated: false)
+//            present(navigation, animated: false)
+            present(navigation, animated: false, completion: nil)
             var arr2 = ["","","","Sell on Amazon","","",""]
             navigation.arr = arr2
         }
@@ -146,6 +147,7 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         else if indexPath.row == 14{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
+//            navigationController?.pushViewController(navigation, animated: false)
             var arr2 = ["Today's","Reward","Amazon Coupons","Clearance Store","Amazon Renewed","Subscribe & Save"]
             navigation.arr = arr2
         }
@@ -158,7 +160,7 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
         else if indexPath.row == 16{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["","Sports","Garden & Outdoor","Bags, Wallets and Luggage","Travel"]
+            var arr2 = ["","Sports","Garden & Outdoor","Bags","Wallets and Luggage","Travel"]
             navigation.arr = arr2
         }
         else if indexPath.row == 17{

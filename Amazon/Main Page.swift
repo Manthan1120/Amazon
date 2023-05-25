@@ -13,6 +13,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var lable: UILabel!
     
+    @IBOutlet weak var imageForHorizontal: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var backPackImage: UIImageView!
     @IBOutlet weak var braslateImage: UIImageView!
@@ -27,14 +28,14 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var collectionView4: UICollectionView!
     @IBOutlet weak var collectionView5: UICollectionView!
     
-    var arrForHorizontle = [0391,0392,0393,0394,0395,0396,0397,0398,0399,03910]
+    var arrForHorizontle = ["0392","0393","0394","0395","0396","0397","0398","0399","03910"]
     var arrForLastText = ["Ear Buts","Electronics accessories","Camera"]
     var arrForLastImage = ["er","as","cm"]
     var arrForKitchenTexts = ["Elecronic Kettles","Cookware","Mixer grinder","Induction cooktop"]
     var arrForKitchenImahes = [UIImage(named: "0341"),UIImage(named: "0342"),UIImage(named: "0343"),UIImage(named: "0344")]
     var arrForSmallAddsImages = [UIImage(named: "0331-1"),UIImage(named: "0332"),UIImage(named: "0333"),UIImage(named: "0334"),UIImage(named: "0335"),UIImage(named: "0336"),UIImage(named: "0337"),UIImage(named: "0338")]
     var arrForImage1 = ["0381","0382","0383","0384","0385","0386","0387","0388","0389","03810","03811","03812","03813","03814","03815","03816"]
-    var arrForAddImages = [18]
+    var arrForAddImages = ["0401","0402","0403","0404","0405","0406"]
     var arrForOfferImage = [UIImage(named: "199"),UIImage(named: "299"),UIImage(named: "399"),UIImage(named: "499")]
     var arrForOfferText = ["Top picks under ₹199","Top picks under ₹299","Top picks under ₹399","Top picks under ₹499"]
     var arrForHeadings = ["Deals","Electronics","Mobiles","Travel","miniTV","Home","Beauties","Furnitures","Pharmacy","Movies","Books,Toys","Appliances","Grocery"]
@@ -58,6 +59,10 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         watchImage.layer.masksToBounds = true
         lable.layer.cornerRadius = 11
         lable.layer.masksToBounds = true
+        imageForHorizontal.layer.cornerRadius = 5
+        imageForHorizontal.layer.borderWidth = 3
+        imageForHorizontal.layer.borderColor = UIColor.systemGray5.cgColor
+        imageForHorizontal.layer.masksToBounds = true
       
        
     }
@@ -95,7 +100,11 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         else if collectionView == self.collectionViewForHorizontle {
             let cell = collectionViewForHorizontle.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell111
             
-            
+            cell.img.image = UIImage(named: "\(arrForHorizontle[indexPath.row])")
+            cell.img.layer.cornerRadius = 5
+            cell.img.layer.borderWidth = 3
+            cell.img.layer.borderColor = UIColor.systemGray5.cgColor
+            cell.img.layer.masksToBounds = true
             return cell
         }
         else if collectionView == self.collectionView2{
