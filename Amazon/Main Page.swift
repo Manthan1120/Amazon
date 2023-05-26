@@ -10,6 +10,7 @@ import UIKit
 class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 ,UISearchBarDelegate{
     
+    @IBOutlet weak var seeAllButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var lable: UILabel!
     
@@ -29,8 +30,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet weak var collectionView5: UICollectionView!
     
     var arrForHorizontle = ["0392","0393","0394","0395","0396","0397","0398","0399","03910"]
-    var arrForLastText = ["Ear Buts","Electronics accessories","Camera"]
-    var arrForLastImage = ["er","as","cm"]
+    var arrForLastImage = ["med","harpic","detol","huggies"]
     var arrForKitchenTexts = ["Elecronic Kettles","Cookware","Mixer grinder","Induction cooktop"]
     var arrForKitchenImahes = [UIImage(named: "0341"),UIImage(named: "0342"),UIImage(named: "0343"),UIImage(named: "0344")]
     var arrForSmallAddsImages = [UIImage(named: "0331-1"),UIImage(named: "0332"),UIImage(named: "0333"),UIImage(named: "0334"),UIImage(named: "0335"),UIImage(named: "0336"),UIImage(named: "0337"),UIImage(named: "0338")]
@@ -63,8 +63,11 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         imageForHorizontal.layer.borderWidth = 3
         imageForHorizontal.layer.borderColor = UIColor.systemGray5.cgColor
         imageForHorizontal.layer.masksToBounds = true
-      
-       
+        seeAllButton.layer.cornerRadius = 5
+        seeAllButton.layer.borderWidth = 3
+        seeAllButton.layer.borderColor = UIColor.systemGray5.cgColor
+        seeAllButton.layer.masksToBounds = true
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -87,7 +90,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
             return arrForKitchenTexts.count
         }
         else {
-            return arrForLastText.count
+            return arrForLastImage.count
         }
     }
     
@@ -142,11 +145,9 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         
         else {
             let cell7 = collectionView7.dequeueReusableCell(withReuseIdentifier: "cell7", for: indexPath) as! CollectionViewCellForLast
-            cell7.backgroundColor = UIColor.systemGray6
-          
-            cell7.layer.cornerRadius = 11
+            
             cell7.images?.image = UIImage(named: arrForLastImage[indexPath.row])
-            cell7.lable?.text = arrForLastText[indexPath.row]
+            
             return cell7
         }
         
@@ -177,7 +178,7 @@ class Home_page: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         }
         else {
             let cvSize = collectionView7.frame.width
-            return CGSize(width: (cvSize-10.1)/3, height: 182)
+            return CGSize(width: (cvSize-10.1)/2, height: 212)
         }
     }
     
