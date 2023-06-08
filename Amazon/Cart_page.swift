@@ -21,6 +21,10 @@ class Cart_page: UIViewController {
         shoppingButton.layer.masksToBounds = true
     }
     
+    @IBAction func micButtonAction(_ sender: Any) {
+        let navigation = storyboard?.instantiateViewController(withIdentifier: "PopUpForMicButton") as! PopUpForMicButton
+        present(navigation, animated: false)
+    }
     @IBAction func pickButtonAction(_ sender: Any) {
     }
     

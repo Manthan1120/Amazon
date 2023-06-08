@@ -30,23 +30,25 @@ class Singin_Page: UIViewController {
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
-        
-        if nameTextFiled.text == "" {
-            showAlert(tital: "Invalide name.!!")
+        let email = isValidEmail(testStr: emailTextFiled.text!)
+        if email == false{
+            showAlert(title: "ERROR!", message: "This is not a valid email. Please try again.")
+            emailTextFiled.text = ""
         }
-        else if emailTextFiled.text == "" {
-            showAlert(tital: "Invalide email.!!")
+        else {
+            navigation()
         }
-        else if createPasswordTextFiled.text == "" {
-            showAlert(tital: "First create your password")
-        }
-        navigation()
         
     }
-    func showAlert(tital:String) {
-        let alert = UIAlertController(title: "Error", message: tital, preferredStyle: .alert)
+    func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
-        present(alert, animated:true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     func navigation(){
         let navigate = storyboard?.instantiateViewController(withIdentifier: "TabBar") as! TabBar
@@ -54,5 +56,8 @@ class Singin_Page: UIViewController {
     }
     
     
-
+    @IBAction func backBUttonAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }

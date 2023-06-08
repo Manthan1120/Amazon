@@ -9,14 +9,21 @@ import UIKit
 
 class PopForMenu: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var lableForTitle: UILabel!
     var arr = [""]
     @IBOutlet weak var ViewForPop: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.alpha = 0
-        ViewForPop.layer.cornerRadius = 25
+        ViewForPop.layer.borderWidth = 5
+        ViewForPop.layer.borderColor = UIColor.systemGray5.cgColor
+        ViewForPop.layer.cornerRadius = 18
         ViewForPop.layer.masksToBounds = true
+        lableForTitle.layer.borderWidth = 2
+        lableForTitle.layer.borderColor = UIColor.systemGray4.cgColor
+        lableForTitle.layer.cornerRadius = 11
+        lableForTitle.layer.masksToBounds = true
     
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -30,9 +37,14 @@ class PopForMenu: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = arr[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCellForPopUp
+        
+        cell.label12.text = arr[indexPath.row]
+        
         return cell
     }
     
+    @IBAction func backButtonAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

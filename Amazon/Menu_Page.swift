@@ -63,111 +63,128 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
 //            present(navigation, animated: false)
             present(navigation, animated: false, completion: nil)
-            var arr2 = ["","","","Sell on Amazon","","",""]
+            var arr2 = ["","","    Sell on Amazon","","",""]
+            navigation.lableForTitle.text = "  Sell"
             navigation.arr = arr2
         }
         else if indexPath.row == 1 {
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["","Gift Cards","Gift Finder","Handloom and Handicafts","Small and Medium","Amazon Launchpad",""]
+            var arr2 = ["    Gift Cards","    Gift Finder","    Handloom and Handicafts","    Small and Medium","    Amazon Launchpad",""]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Gifting"
         }
         else if indexPath.row == 2{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Books","Amazon","Audible Audiobooks","eBook","Prime Reading","Kindle Unlimited","Kindle"]
+            var arr2 = ["    Books","    Amazon","    Audible Audiobooks","    eBook","    Prime Reading","      Kindle Unlimited","Kindle"]
+            navigation.lableForTitle.text = "  Educations"
             navigation.arr = arr2
         }
         else if indexPath.row == 3{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["","","Car & Motorbike","Insurans","",""]
+            var arr2 = ["","    Car & Motorbike","    Insurans","",""]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Automotive"
         }
         else if indexPath.row == 4{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Amazon Pay","Reward","Mobile Recharge","Bill Payments","Send Money","Travel","Movie","Gift Cards","Car & Bike Insurance"]
+            var arr2 = ["    Amazon Pay","    Reward","    Mobile Recharge","    Bill Payments","    Send Money","    Travel","    Movie","    Gift Cards","    Car & Bike Insurance"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Payment & Booking"
         }
         else if indexPath.row == 5{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["","","Amazon Live","FunZone","",""]
+            var arr2 = ["","    Amazon Live","    FunZone","",""]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Funzone"
         }
         else if indexPath.row == 6{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Groooming & Wellness Devices","Health & Household Suppplies","Amazon","Beauty","Amazon Pharmacy","Daily","Subscribe & Save"]
+            var arr2 = ["    Groooming & Wellness Devices","    Health & Household Suppplies","    Amazon","    Beauty","    Amazon Pharmacy","    Daily","    Subscribe & Save"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Personal Care"
         }
         else if indexPath.row == 7{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Video Games","Musical","Amazon miniTV","Prime Video","Prime","FunZone","Movie"]
+            var arr2 = ["    Video Games","    Musical","     Amazon miniTV","    Prime Video","    Prime","    FunZone","    Movie"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Music,Vedio & Game"
         }
         else if indexPath.row == 8{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Computers","Office","Software","Industrial & Scientific Supplies","Amazon","Amazon"]
+            var arr2 = ["    Computers","    Office","    Software","    Industrial & Scientific Supplies","    Amazon","    Amazon"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Office"
         }
         else if indexPath.row == 9{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Home & Kitchen","furniture","Style Feed","TVs","Garden & Outdoor","Handloom and Handicrafts","Our Brands","small and Medium","Local Shops on Amazon","Health & House Supplies"]
+            var arr2 = ["    Home & Kitchen","    furniture","    Style Feed","    TVs","    Garden & Outdoor","    Handloom and Handicrafts","    Our Brands","    small and Medium","    Local Shops on Amazon","    Health & House Supplies"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Home"
         }
         else if indexPath.row == 10{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Grocery & Gourment food","Amazon","Friuts & Vegetables","Meat & Seafood","Daily","Pet Supplies","Subscribe & Save"]
+            var arr2 = ["    Grocery & Gourment food","    Amazon","    Friuts & Vegetables","    Meat & Seafood","    Daily","    Pet Supplies","    Subscribe & Save"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Groceries"
         }
         else if indexPath.row == 11{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Amazon","electronics","Computers","TVs","Echo and Fire TV","Software","Kindly","Grooming & Wellness Devices","Amazon Launchpad","Local Shops on Amazon"]
+            var arr2 = ["    Amazon","    electronics","    Computers","    TVs","    Echo and Fire TV","    Software","    Kindly","    Grooming & Wellness Devices","    Amazon Launchpad","    Local Shops on Amazon"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Electroincs"
         }
         else if indexPath.row == 12{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["women's Fashion","Men's","Kids'","Beauty","Watche","Bags,Wallets and Luggage","Handloom and Handicrafts","Small and Medium","Local Shop on Amazon","Style Feed"]
+            var arr2 = ["    Women's Fashion","    Men's","    Kids'","    Beauty","    Watche","    Bags,Wallets and Luggage","    Handloom and Handicrafts","    Small and Medium","    Local Shop on Amazon","    Style Feed"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Beauty & Fashion"
         }
         else if indexPath.row == 13{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["Your Orders","Buy Again","Your Wish","Your","Your","Your Recommendations","Alexa Shopping List"]
+            var arr2 = ["    Your Orders","    Buy Again","    Your Wish","    Your","    Your","    Your Recommendations","    Alexa Shopping List"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Your Things"
         }
         else if indexPath.row == 14{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-//            navigationController?.pushViewController(navigation, animated: false)
-            var arr2 = ["Today's","Reward","Amazon Coupons","Clearance Store","Amazon Renewed","Subscribe & Save"]
+            var arr2 = ["    Today's","    Reward","    Amazon Coupons","    Clearance Store","    Amazon Renewed","    Subscribe & Save"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Deals & Savings"
         }
         else if indexPath.row == 15{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["","Try Prime","Prime Video","Prime Reading","Prime",""]
+            var arr2 = ["    Try Prime","    Prime Video","    Prime Reading","    Prime",""]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Prime"
         }
         else if indexPath.row == 16{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["","Sports","Garden & Outdoor","Bags","Wallets and Luggage","Travel"]
+            var arr2 = ["    Sports","    Garden & Outdoor","    Bags","    Wallets and Luggage","    Travel"]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Sports"
         }
         else if indexPath.row == 17{
             let navigation = storyboard?.instantiateViewController(withIdentifier: "PopForMenu") as! PopForMenu
             present(navigation, animated: false)
-            var arr2 = ["","Toys & Game","Baby","Kids'","Baby Wishlist",""]
+            var arr2 = ["    Toys & Game","    Baby","    Kid's","    Baby Wishlist",""]
             navigation.arr = arr2
+            navigation.lableForTitle.text = "  Toys"
         }
     }
     
