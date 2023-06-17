@@ -80,10 +80,10 @@ class Login_Page: UIViewController {
         eye+=1
         eye%=2
         if eye == 1{
-            ImageForEye.image = UIImage(named: "view")
+            ImageForEye.image = UIImage(named: "hide")
             passwordTextFiled.isSecureTextEntry = false
         }else if eye == 0 {
-            ImageForEye.image = UIImage(named: "hide")
+            ImageForEye.image = UIImage(named: "view")
             passwordTextFiled.isSecureTextEntry = true
         }
     }

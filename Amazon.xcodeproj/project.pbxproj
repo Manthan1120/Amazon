@@ -25,6 +25,8 @@
 		DE2BB55F29F2558100170481 /* Braslate_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BB55E29F2558100170481 /* Braslate_Page.swift */; };
 		DE2BB56129F2559C00170481 /* Bage_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BB56029F2559C00170481 /* Bage_Page.swift */; };
 		DE2BB56329F2676500170481 /* CollectionViewCellForOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BB56229F2676500170481 /* CollectionViewCellForOffer.swift */; };
+		DE47E4AE2A3D6E54000A8065 /* userDataSaveFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE47E4AD2A3D6E54000A8065 /* userDataSaveFile.swift */; };
+		DE47E4B12A3D7A93000A8065 /* DPOTPView in Frameworks */ = {isa = PBXBuildFile; productRef = DE47E4B02A3D7A93000A8065 /* DPOTPView */; };
 		DE52C34C2A0C610500549F13 /* MiniTvPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C34B2A0C610500549F13 /* MiniTvPage.swift */; };
 		DE52C34E2A0C612400549F13 /* PayPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C34D2A0C612400549F13 /* PayPage.swift */; };
 		DE52C3502A0C635C00549F13 /* PopUpForMicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C34F2A0C635C00549F13 /* PopUpForMicButton.swift */; };
@@ -74,6 +76,7 @@
 		DE2BB55E29F2558100170481 /* Braslate_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Braslate_Page.swift; sourceTree = "<group>"; };
 		DE2BB56029F2559C00170481 /* Bage_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bage_Page.swift; sourceTree = "<group>"; };
 		DE2BB56229F2676500170481 /* CollectionViewCellForOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForOffer.swift; sourceTree = "<group>"; };
+		DE47E4AD2A3D6E54000A8065 /* userDataSaveFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataSaveFile.swift; sourceTree = "<group>"; };
 		DE52C34B2A0C610500549F13 /* MiniTvPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTvPage.swift; sourceTree = "<group>"; };
 		DE52C34D2A0C612400549F13 /* PayPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPage.swift; sourceTree = "<group>"; };
 		DE52C34F2A0C635C00549F13 /* PopUpForMicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpForMicButton.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE47E4B12A3D7A93000A8065 /* DPOTPView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,11 +123,6 @@
 		DEB268F929E7CDE800BCBC8E = {
 			isa = PBXGroup;
 			children = (
-				DE14B3D22A31CA75007516E4 /* TableViewCellForSetting.swift */,
-				DE9A05E22A30888300E46140 /* ResetPassword_Page.swift */,
-				DE9A05E02A30851800E46140 /* Otp_Page.swift */,
-				DE9A05DE2A3084F200E46140 /* Forgote_Page.swift */,
-				DE10CB422A3056CE00DBF5F1 /* TableViewCellForPopUp.swift */,
 				DEB2690429E7CDE800BCBC8E /* Amazon */,
 				DEB2690329E7CDE800BCBC8E /* Products */,
 				DE10CB3E2A30569D00DBF5F1 /* Amazon-Bridging-Header.h */,
@@ -141,6 +140,11 @@
 		DEB2690429E7CDE800BCBC8E /* Amazon */ = {
 			isa = PBXGroup;
 			children = (
+				DE14B3D22A31CA75007516E4 /* TableViewCellForSetting.swift */,
+				DE9A05E22A30888300E46140 /* ResetPassword_Page.swift */,
+				DE9A05E02A30851800E46140 /* Otp_Page.swift */,
+				DE9A05DE2A3084F200E46140 /* Forgote_Page.swift */,
+				DE10CB422A3056CE00DBF5F1 /* TableViewCellForPopUp.swift */,
 				DE89864E2A14B202007093B4 /* TableViewCellForCoustomerService.swift */,
 				DE1306AD2A11F09900734D23 /* PopForBooks&Educatiion.swift */,
 				DE95B5A62A0DBB0100ED1385 /* SettingPopUp.swift */,
@@ -156,7 +160,6 @@
 				DEB2690529E7CDE800BCBC8E /* AppDelegate.swift */,
 				DEB2690729E7CDE800BCBC8E /* SceneDelegate.swift */,
 				DEB2690929E7CDE800BCBC8E /* User_Account_Page.swift */,
-				DEB2690B29E7CDE800BCBC8E /* Main.storyboard */,
 				DE5EA06A2A1C80F40081C631 /* CollectionViewCell1122.swift */,
 				DE95B5A42A0DB55A00ED1385 /* coustomer_Page.swift */,
 				DED7C5162A08676300D4D190 /* CollectionViewCellForMenu.swift */,
@@ -173,11 +176,13 @@
 				DEF9FE08408A03FD005686C7 /* CollectionViewCellFor2ndAdd.swift */,
 				DE142DE329EE7C90004634AD /* CollectionViewCellForTopHeaders.swift */,
 				DEB2692029E7D0AD00BCBC8E /* Singin_Page.swift */,
+				DE47E4AD2A3D6E54000A8065 /* userDataSaveFile.swift */,
 				DEB2691E29E7D07100BCBC8E /* Login_Page.swift */,
 				DE142DE529EE8C51004634AD /* CollectionViewCellForMidAdvertise.swift */,
 				DEB2691C29E7CEA000BCBC8E /* Main Page.swift */,
 				DEA20B082A1B5FDD005E7251 /* CollectionViewCell111.swift */,
 				DE84A34229F644DE0099BDEA /* CollectionViewCellForSmallAdds.swift */,
+				DEB2690B29E7CDE800BCBC8E /* Main.storyboard */,
 				DEB2691129E7CDE900BCBC8E /* Assets.xcassets */,
 				DEB2691329E7CDE900BCBC8E /* LaunchScreen.storyboard */,
 				DEB2691629E7CDE900BCBC8E /* Info.plist */,
@@ -202,6 +207,9 @@
 			dependencies = (
 			);
 			name = Amazon;
+			packageProductDependencies = (
+				DE47E4B02A3D7A93000A8065 /* DPOTPView */,
+			);
 			productName = Amazon;
 			productReference = DEB2690229E7CDE800BCBC8E /* Amazon.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +239,9 @@
 				Base,
 			);
 			mainGroup = DEB268F929E7CDE800BCBC8E;
+			packageReferences = (
+				DE47E4AF2A3D7A93000A8065 /* XCRemoteSwiftPackageReference "DPOTPView" */,
+			);
 			productRefGroup = DEB2690329E7CDE800BCBC8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,6 +276,7 @@
 				DE0E547529E91FD10061C04E /* Cart_page.swift in Sources */,
 				DE2BB55B29F2554000170481 /* Watch_Page.swift in Sources */,
 				DED8C1C229F8ECE20037E9D1 /* CollectionViewCellForKitchen.swift in Sources */,
+				DE47E4AE2A3D6E54000A8065 /* userDataSaveFile.swift in Sources */,
 				DE9A05DF2A3084F200E46140 /* Forgote_Page.swift in Sources */,
 				DE0E547B29E93FE70061C04E /* TabBar.swift in Sources */,
 				DEA20B092A1B5FDD005E7251 /* CollectionViewCell111.swift in Sources */,
@@ -445,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +535,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE47E4AF2A3D7A93000A8065 /* XCRemoteSwiftPackageReference "DPOTPView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Datt1994/DPOTPView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE47E4B02A3D7A93000A8065 /* DPOTPView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE47E4AF2A3D7A93000A8065 /* XCRemoteSwiftPackageReference "DPOTPView" */;
+			productName = DPOTPView;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DEB2690E29E7CDE800BCBC8E /* Amazon.xcdatamodeld */ = {

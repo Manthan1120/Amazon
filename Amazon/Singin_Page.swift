@@ -18,7 +18,7 @@ class Singin_Page: UIViewController {
     @IBOutlet weak var emailTextFiled: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Sqlite.createFile()
         backGround.layer.cornerRadius = 40
         backGround.layer.masksToBounds = true
         signInButtonOutlet.layer.cornerRadius = 13
@@ -38,6 +38,7 @@ class Singin_Page: UIViewController {
             emailTextFiled.text = ""
         }
         else {
+            Sqlite.addData(name: nameTextFiled.text!, password: createPasswordTextFiled.text!, email: emailTextFiled.text!)
             navigation()
         }
         

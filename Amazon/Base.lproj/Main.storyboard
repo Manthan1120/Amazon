@@ -296,7 +296,7 @@
                                     <action selector="backButtonAction:" destination="DM5-x3-n1H" eventType="touchUpInside" id="xEY-rG-v4Y"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hide" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-By-Jho">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="view" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-By-Jho">
                                 <rect key="frame" x="361" y="442" width="25" height="25"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -3163,7 +3163,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyo-4S-gDZ">
-                                <rect key="frame" x="30" y="617" width="370" height="60"/>
+                                <rect key="frame" x="30" y="404" width="370" height="60"/>
                                 <color key="backgroundColor" red="0.94017252299999998" green="0.61640189140000001" blue="0.19624391499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="3lG-UL-dAW"/>
@@ -3179,37 +3179,78 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfy-TD-Yv5">
-                                <rect key="frame" x="20" y="685" width="165" height="35"/>
+                                <rect key="frame" x="20" y="472" width="165" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Resent Otp..?">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="resentOtpButtonAction:" destination="Syb-bc-Jrb" eventType="touchUpInside" id="qJM-mM-Scn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIR-m7-mlS">
-                                <rect key="frame" x="193" y="685" width="217" height="35"/>
+                                <rect key="frame" x="193" y="472" width="217" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Change Num.. oR Email ?">
+                                <buttonConfiguration key="configuration" style="plain" title="Change Num.. Or Email ?">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="changeNumOrEmailButttonAction:" destination="Syb-bc-Jrb" eventType="touchUpInside" id="gqq-Xq-F7t"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="DPOTPView" translatesAutoresizingMaskIntoConstraints="NO" id="QNT-K2-D39" customClass="DPOTPView" customModule="DPOTPView">
+                                <rect key="frame" x="30" y="304" width="370" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="count">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColorTextField">
+                                        <color key="value" systemColor="systemGray6Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="0000"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorTextField">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedBorderWidthTextField">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusTextField">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBorderColorTextField">
+                                        <color key="value" systemColor="systemGray5Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColorTextField">
+                                        <color key="value" systemColor="systemGray5Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                        <color key="value" systemColor="systemGray4Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthTextField">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RNM-2v-5es"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iyo-4S-gDZ" firstAttribute="top" secondItem="RNM-2v-5es" secondAttribute="top" constant="558" id="Q3J-RA-reD"/>
+                            <constraint firstItem="iyo-4S-gDZ" firstAttribute="top" secondItem="RNM-2v-5es" secondAttribute="top" constant="345" id="Q3J-RA-reD"/>
                             <constraint firstItem="iyo-4S-gDZ" firstAttribute="leading" secondItem="RNM-2v-5es" secondAttribute="leading" constant="30" id="kOE-3I-EOy"/>
                             <constraint firstItem="iyo-4S-gDZ" firstAttribute="centerX" secondItem="GnX-Qh-asx" secondAttribute="centerX" id="opP-TO-TRW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="otpView" destination="QNT-K2-D39" id="Jhy-R7-q5J"/>
                         <outlet property="submitButton" destination="iyo-4S-gDZ" id="8nl-Pz-hcw"/>
                     </connections>
                 </viewController>
@@ -3305,7 +3346,6 @@
         <image name="detailBanner" width="1080" height="126"/>
         <image name="down" width="24" height="24"/>
         <image name="eb96404c-de4a-4a11-8c71-564d436984f2" width="873" height="643"/>
-        <image name="hide" width="24" height="24"/>
         <image name="home-1" width="24" height="24"/>
         <image name="list" width="64" height="64"/>
         <image name="location" width="24" height="24"/>
