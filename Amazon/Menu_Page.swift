@@ -206,8 +206,6 @@ class Menu_Page: UIViewController,UICollectionViewDataSource,UICollectionViewDel
     }
     @IBAction func micButtonAction(_ sender: Any) {
         let navigation = storyboard?.instantiateViewController(withIdentifier: "PopUpForMicButton") as! PopUpForMicButton
-//        present(navigation, animated: false)
-//        navigation.present(navigation, animated: false)
         navigationController?.present(navigation, animated: true)
     }
     

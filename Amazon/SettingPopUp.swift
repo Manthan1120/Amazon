@@ -11,28 +11,23 @@ class SettingPopUp: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     
     let arr = ["Country & Language","Notification","Language A/","Alex","Permission","Default Purchase Setting","Legal & About","Switch","Sign Out"]
-    @IBOutlet weak var ViewForSetting: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.alpha = 0
-        ViewForSetting.layer.cornerRadius = 25
-        ViewForSetting.layer.masksToBounds = true
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear){
-            self.view.alpha = 1
-        }
-    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-       cell.textLabel?.text = arr[indexPath.row]
-       return cell
+        let cell2020 = tableView.dequeueReusableCell(withIdentifier: "cell2020") as! TableViewCellForSetting
+        cell2020.lableForHeading.text = arr[indexPath.row]
+        return cell2020
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 
 }

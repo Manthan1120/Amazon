@@ -17,6 +17,7 @@
 		DE1306AE2A11F09900734D23 /* PopForBooks&Educatiion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1306AD2A11F09900734D23 /* PopForBooks&Educatiion.swift */; };
 		DE142DE429EE7C90004634AD /* CollectionViewCellForTopHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE142DE329EE7C90004634AD /* CollectionViewCellForTopHeaders.swift */; };
 		DE142DE629EE8C51004634AD /* CollectionViewCellForMidAdvertise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE142DE529EE8C51004634AD /* CollectionViewCellForMidAdvertise.swift */; };
+		DE14B3D32A31CA75007516E4 /* TableViewCellForSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14B3D22A31CA75007516E4 /* TableViewCellForSetting.swift */; };
 		DE17B05729FB7E77009E6E11 /* CollectionViewCellForLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE17B05629FB7E77009E6E11 /* CollectionViewCellForLast.swift */; };
 		DE1E76A729F1119C00070167 /* POPUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E76A629F1119C00070167 /* POPUp.swift */; };
 		DE2BB55B29F2554000170481 /* Watch_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BB55A29F2554000170481 /* Watch_Page.swift */; };
@@ -65,6 +66,7 @@
 		DE1306AD2A11F09900734D23 /* PopForBooks&Educatiion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopForBooks&Educatiion.swift"; sourceTree = "<group>"; };
 		DE142DE329EE7C90004634AD /* CollectionViewCellForTopHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForTopHeaders.swift; sourceTree = "<group>"; };
 		DE142DE529EE8C51004634AD /* CollectionViewCellForMidAdvertise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForMidAdvertise.swift; sourceTree = "<group>"; };
+		DE14B3D22A31CA75007516E4 /* TableViewCellForSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForSetting.swift; sourceTree = "<group>"; };
 		DE17B05629FB7E77009E6E11 /* CollectionViewCellForLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForLast.swift; sourceTree = "<group>"; };
 		DE1E76A629F1119C00070167 /* POPUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPUp.swift; sourceTree = "<group>"; };
 		DE2BB55A29F2554000170481 /* Watch_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_Page.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		DEB268F929E7CDE800BCBC8E = {
 			isa = PBXGroup;
 			children = (
+				DE14B3D22A31CA75007516E4 /* TableViewCellForSetting.swift */,
 				DE9A05E22A30888300E46140 /* ResetPassword_Page.swift */,
 				DE9A05E02A30851800E46140 /* Otp_Page.swift */,
 				DE9A05DE2A3084F200E46140 /* Forgote_Page.swift */,
@@ -273,6 +276,7 @@
 				DE10CB432A3056CE00DBF5F1 /* TableViewCellForPopUp.swift in Sources */,
 				DE1306AE2A11F09900734D23 /* PopForBooks&Educatiion.swift in Sources */,
 				DE95B5A52A0DB55A00ED1385 /* coustomer_Page.swift in Sources */,
+				DE14B3D32A31CA75007516E4 /* TableViewCellForSetting.swift in Sources */,
 				DEB2691029E7CDE800BCBC8E /* Amazon.xcdatamodeld in Sources */,
 				DEB2690629E7CDE800BCBC8E /* AppDelegate.swift in Sources */,
 				DE6C173429E95ECB00C2DEBE /* MyCollectionViewCell1.swift in Sources */,

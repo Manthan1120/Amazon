@@ -9,8 +9,10 @@ import UIKit
 
 class Login_Page: UIViewController {
     
-    var a = 1
+    var tick = 1
+    var eye = 1
     
+    @IBOutlet weak var ImageForEye: UIImageView!
     @IBOutlet weak var imageForTick: UIImageView!
     @IBOutlet weak var backGround: UILabel!
     @IBOutlet weak var emailTextFiled: UITextField!
@@ -30,8 +32,6 @@ class Login_Page: UIViewController {
         emailTextFiled.layer.masksToBounds = true
         passwordTextFiled.layer.cornerRadius = 13
         passwordTextFiled.layer.masksToBounds = true
-        
-        
     }
     func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -45,20 +45,22 @@ class Login_Page: UIViewController {
     }
     
     @IBAction func tickMarkButtonAction(_ sender: Any) {
-        a+=1
-        a%=2
-        if a == 1{
+        tick+=1
+        tick%=2
+        if tick == 1{
             imageForTick.image = UIImage(systemName: "checkmark.circle.fill")
-        }
-        else if a == 0 {
-            imageForTick.image = UIImage(systemName: "00")
+        }else if tick == 0 {
+            imageForTick.image = UIImage(systemName: ".0M0.")
         }
     }
     @IBAction func logInButtonAction(_ sender: Any) {
         let email = isValidEmail(testStr: emailTextFiled.text!)
-        if email == false{
-            showAlert(title: "ERROR!", message: "This is not a valid email. Please try again.")
+        if email == false && emailTextFiled.text?.count != 10{
+            showAlert(title: "ERROR!", message: "Invalid email")
             emailTextFiled.text = ""
+        }else if passwordTextFiled.text!.count != 6 {
+            showAlert(title: "ERROR!", message: "Invalid password")
+            passwordTextFiled.text = ""
         }
         else {
             navigation()
@@ -74,12 +76,27 @@ class Login_Page: UIViewController {
         navigationController?.pushViewController(navigate, animated: true)
     }
     
+    @IBAction func eyeButton(_ sender: Any) {
+        eye+=1
+        eye%=2
+        if eye == 1{
+            ImageForEye.image = UIImage(named: "view")
+            passwordTextFiled.isSecureTextEntry = false
+        }else if eye == 0 {
+            ImageForEye.image = UIImage(named: "hide")
+            passwordTextFiled.isSecureTextEntry = true
+        }
+    }
     @IBAction func BackButtonAction(_ sender: Any) {
+      
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func forgoteButtonAction(_ sender: Any) {
         let navigate = storyboard?.instantiateViewController(withIdentifier: "Forgote_Page") as! Forgote_Page
         navigationController?.pushViewController(navigate, animated: true)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
