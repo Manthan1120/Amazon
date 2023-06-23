@@ -11,7 +11,7 @@ class Login_Page: UIViewController {
     
     var tick = 1
     var eye = 1
-    
+    var arr2 = Sqlite.getData()
     @IBOutlet weak var ImageForEye: UIImageView!
     @IBOutlet weak var imageForTick: UIImageView!
     @IBOutlet weak var backGround: UILabel!
@@ -22,6 +22,8 @@ class Login_Page: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(arr2.count)
         emailTextFiled.layer.cornerRadius = 4
         emailTextFiled.layer.masksToBounds = true
         backGround.layer.cornerRadius = 40
@@ -33,6 +35,7 @@ class Login_Page: UIViewController {
         passwordTextFiled.layer.cornerRadius = 13
         passwordTextFiled.layer.masksToBounds = true
     }
+    
     func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
@@ -50,21 +53,28 @@ class Login_Page: UIViewController {
         if tick == 1{
             imageForTick.image = UIImage(systemName: "checkmark.circle.fill")
         }else if tick == 0 {
-            imageForTick.image = UIImage(systemName: ".0M0.")
+            imageForTick.image = UIImage(systemName: ".0_0.")
         }
     }
     @IBAction func logInButtonAction(_ sender: Any) {
-        let email = isValidEmail(testStr: emailTextFiled.text!)
-        if email == false && emailTextFiled.text?.count != 10{
-            showAlert(title: "ERROR!", message: "Invalid email")
-            emailTextFiled.text = ""
-        }else if passwordTextFiled.text!.count != 6 {
-            showAlert(title: "ERROR!", message: "Invalid password")
-            passwordTextFiled.text = ""
-        }
-        else {
+        
+//        let email = isValidEmail(testStr: emailTextFiled.text!)
+//        if email == false && emailTextFiled.text?.count != 10{
+//            showAlert(title: "ERROR!", message: "Invalid email")
+//            emailTextFiled.text = ""
+//        }else if passwordTextFiled.text!.count != 6 {
+//            showAlert(title: "ERROR!", message: "Invalid password")
+//            passwordTextFiled.text = ""
+//        }else {
+//            navigation()
+//        }
+        
+        if Sqlite.checkData(email: emailTextFiled.text ?? "", password: passwordTextFiled.text ?? "")
+        {
+            print("login")
             navigation()
         }
+
     }
     func showAlert(tital:String) {
         let alert = UIAlertController(title: "Error", message: tital, preferredStyle: .alert)
@@ -80,10 +90,10 @@ class Login_Page: UIViewController {
         eye+=1
         eye%=2
         if eye == 1{
-            ImageForEye.image = UIImage(named: "hide")
+            ImageForEye.image = UIImage(named: "view")
             passwordTextFiled.isSecureTextEntry = false
         }else if eye == 0 {
-            ImageForEye.image = UIImage(named: "view")
+            ImageForEye.image = UIImage(named: "hide")
             passwordTextFiled.isSecureTextEntry = true
         }
     }
@@ -96,6 +106,9 @@ class Login_Page: UIViewController {
         let navigate = storyboard?.instantiateViewController(withIdentifier: "Forgote_Page") as! Forgote_Page
         navigationController?.pushViewController(navigate, animated: true)
     }
+    
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

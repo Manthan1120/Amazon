@@ -42,5 +42,46 @@ class Sqlite {
        sqlite3_step(data)
         
     }
+    static func getData()->[Data] {
+        var arr = [Data]()
+        let q = "select name,email,password from Students"
+        var get: OpaquePointer?
+        sqlite3_prepare(file, q, -1, &get, nil)
+        
+        while sqlite3_step(get) == SQLITE_ROW {
+            if let cString0 = sqlite3_column_text(get,0) , let cString1 = sqlite3_column_text(get,1) , let cString2 = sqlite3_column_text(get,2){
+                let name = String(cString: cString0)
+                let password = String(cString:cString2)
+                let email = String(cString: cString1)
+                arr.append(Data(password: password, name: name, email: email))
+            }
+        }
+        print("Get data")
+        return arr
+        
+    }
+    
+    static func checkData(email: String,password: String) -> Bool {
+        var arr = [Data]()
+        let q = "select name,email,password from Students WHERE email = '\(email)' and password = '\(password)'"
+        var get: OpaquePointer?
+        sqlite3_prepare(file, q, -1, &get, nil)
+        
+        while sqlite3_step(get) == SQLITE_ROW {
+            if let cString0 = sqlite3_column_text(get,0) , let cString1 = sqlite3_column_text(get,1) , let cString2 = sqlite3_column_text(get,2){
+                let name = String(cString: cString0)
+                let password = String(cString:cString2)
+                let email = String(cString: cString1)
+                arr.append(Data(password: password, name: name, email: email))
+                print("ok")
+            }
+            else {
+                print("Error")
+            }
+        }
+        print("Get data")
+        return arr.count != 0
+        
+    }
 }
 

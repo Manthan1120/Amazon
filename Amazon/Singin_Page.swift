@@ -32,6 +32,7 @@ class Singin_Page: UIViewController {
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
+  
         let email = isValidEmail(testStr: emailTextFiled.text!)
         if email == false{
             showAlert(title: "ERROR!", message: "This is not a valid email. Please try again.")
